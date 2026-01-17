@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TestIQ - Aplikasi Tes IQ Responsif</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <div>
+        <p class="pill">TestIQ • Smart Assessment</p>
+        <h1>Aplikasi Tes IQ Elegan untuk Smartphone & Tablet</h1>
+        <p class="subtitle">
+          Pilih jenis tes, mulai timer otomatis, jawab soal, dan dapatkan analisis hasil lengkap
+          beserta saran belajar maupun karier yang relevan.
+        </p>
+        <div class="hero-actions">
+          <button class="btn primary" id="scrollToTests">Mulai Pilih Tes</button>
+          <button class="btn ghost" id="viewGuide">Panduan Singkat</button>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stat">
+          <span class="stat-icon">🧠</span>
+          <div>
+            <strong>4 Tingkatan Tes</strong>
+            <small>Singkat, Standar, Profesional, Seleksi</small>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-icon">⏱️</span>
+          <div>
+            <strong>Timer Otomatis</strong>
+            <small>Waktu terukur sesuai standar</small>
+          </div>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-icon">📊</span>
+          <div>
+            <strong>Analisis & Saran</strong>
+            <small>Rekomendasi belajar dan karier</small>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="tests">
+      <div class="section-title">
+        <h2>Pilih Jenis Tes IQ</h2>
+        <p>Setiap tes memiliki jumlah soal dan rentang waktu yang berbeda sesuai kebutuhan.</p>
+      </div>
+
+      <div class="test-grid" id="testGrid"></div>
+    </section>
+
+    <section class="section test-runner" id="testRunner">
+      <div class="runner-header">
+        <div>
+          <p class="runner-label">Sesi Tes</p>
+          <h3 id="runnerTitle">Tes IQ</h3>
+          <p id="runnerMeta"></p>
+        </div>
+        <div class="timer" id="timer">00:00</div>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="question-card">
+        <p class="question-index" id="questionIndex">Soal 1</p>
+        <h4 id="questionText">Pertanyaan akan muncul di sini.</h4>
+        <div class="options" id="options"></div>
+      </div>
+
+      <div class="runner-actions">
+        <button class="btn ghost" id="prevQuestion">Sebelumnya</button>
+        <button class="btn primary" id="nextQuestion">Selanjutnya</button>
+        <button class="btn danger" id="finishTest">Selesaikan Tes</button>
+      </div>
+    </section>
+
+    <section class="section results" id="results">
+      <div class="section-title">
+        <h2>Hasil Tes IQ</h2>
+        <p>Analisis ringkas, kekuatan kognitif, dan saran pengembangan diri.</p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card">
+          <h3>Skor Akhir</h3>
+          <p class="score" id="finalScore">0</p>
+          <p id="scoreLabel">Belum ada hasil.</p>
+        </div>
+        <div class="result-card">
+          <h3>Analisis</h3>
+          <ul id="analysisList"></ul>
+        </div>
+        <div class="result-card">
+          <h3>Saran Belajar & Karier</h3>
+          <ul id="recommendationList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guide">
+      <div class="section-title">
+        <h2>Panduan Singkat</h2>
+      </div>
+      <div class="guide-grid">
+        <div class="guide-card">
+          <span class="guide-icon">🎯</span>
+          <h4>Fokus pada Akurasi</h4>
+          <p>Jawab soal dengan cepat namun pastikan ketepatan logika dan pola.</p>
+        </div>
+        <div class="guide-card">
+          <span class="guide-icon">📚</span>
+          <h4>Latihan Pola</h4>
+          <p>Latih kemampuan numerik, verbal, dan visual untuk hasil optimal.</p>
+        </div>
+        <div class="guide-card">
+          <span class="guide-icon">💼</span>
+          <h4>Sesuaikan Tujuan</h4>
+          <p>Gunakan hasil tes sebagai peta kemampuan untuk belajar atau karier.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 TestIQ. Dirancang untuk pengalaman tes IQ yang elegan dan informatif.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
